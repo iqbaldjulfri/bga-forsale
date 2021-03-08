@@ -48,6 +48,7 @@ function displayLogs() {
     p['value per dollar'] = parseFloat((total / (startingMoney - p.money)).toFixed(2));
   };
 
+  console.clear();
   console.table(players, ['money', 'property list', 'value per dollar']);
 }
 
@@ -59,6 +60,7 @@ function displayCards() {
   for ({user, bid, prop} of biddingLogs) cards[prop] = {user, bid};
   for ({user, prop, price} of offeringLogs) cards[prop] = {...cards[prop], price};
 
+  console.clear();
   console.table(cards, ['user', 'price']);
 }
 
